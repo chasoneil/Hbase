@@ -3,7 +3,6 @@
 // JS 对象
 
 // 1. 使用 {} 定义js 对象
-
 let person = {
     name : 'chason',
     age: 20
@@ -11,7 +10,6 @@ let person = {
 
 
 // 2. 对象的属性名尽量不用使用特殊符号，推荐驼峰
-
 let student = {
     name : 'chason',
     "middle-school" : 'the one', // 如果属性名中有特殊符号 就要用引号括起来
