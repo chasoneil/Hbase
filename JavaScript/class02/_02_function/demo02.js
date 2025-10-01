@@ -82,8 +82,9 @@ MYAPP.test = function(x) {
 
 MYAPP.test(1);
 
-// 2.3 let 和 var
+// 2.3 局部作用域 let 和 var  
 // var 无法声明一个块级的变量范围 但是let 可以
+// let 是ES6引入的关键字  推荐使用let关键字
 
 MYAPP.test1 = function() {
 
@@ -98,4 +99,36 @@ MYAPP.test1 = function() {
 };
 
 MYAPP.test1();
+
+// 2.4 定义常量 const
+const PI = 3.14;       // PI 不能被修改
+console.log(PI);
+
+
+// PI = 3.15; 报错
+
+// 2.5 解构赋值  就是一种方便定义变量和赋值的方式
+
+let [x, y, z] = ['a', 'b', 'c'];
+console.log(`x=${x} y=${y} z=${z}`);
+
+// js 解构还可以直接解构对象
+
+let person = {
+    name : 'chason',
+    age : 20,
+    score: 95.5,
+    addr : {
+        city : "Shanghai",
+        area : "Pudong"
+    }
+};
+
+let {name, age} = person;   // 可以使用这种方式解构对象属性的值
+console.log(`name=${name} age=${age}`);
+
+// 对象的解构当层次正确的时候，嵌套的对象也可以解构
+
+let {score, addr :{city, area}} = person;  // 使用这种解构方式必须要将内部对象的名称指定
+console.log(`score=${score} city=${city} area=${area}`);        // 获取对象的时候不再需要使用对象.属性
 
